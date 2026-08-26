@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupprumsbokning</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -17,7 +18,8 @@
     </header>
     <main>
         <h1>Bokningar</h1>
-        <table scope="col" border="2px solid black" cellspacing="6px" cellpadding="4px">
+        <div id="tablediv">
+        <table>
             <thead>
                 <tr>
                     <th>Rum</th>
@@ -35,7 +37,7 @@
                     <td>12:30</td>
                     <td>13:30</td>
                     <td>David Thörnqvist</td>
-                    <td>Bokad</td>
+                    <td>Bokning genomförd</td>
                 </tr>
                 <tr>
                     <td>Grupprum 103</td>
@@ -43,7 +45,7 @@
                     <td>13:50</td>
                     <td>14:30</td>
                     <td>Hugo Nyberg</td>
-                    <td>Bokad</td>
+                    <td>Bokning under gång</td>
                 </tr>
                 <tr>
                     <td>Grupprum 202</td>
@@ -51,7 +53,7 @@
                     <td>12:30</td>
                     <td>13:30</td>
                     <td>Vilhelm Gustafson</td>
-                    <td>Bokad</td>
+                    <td>Bokning väntande</td>
                 </tr>
                 <tr>
                     <td>Grupprum 202</td>
@@ -59,7 +61,7 @@
                     <td>12:30</td>
                     <td>13:30</td>
                     <td>David Löfgren Forsén</td>
-                    <td>Bokad</td>
+                    <td>Bokning genomförd</td>
                 </tr>
                 <tr>
                     <td>Grupprum 104</td>
@@ -67,10 +69,10 @@
                     <td>10:30</td>
                     <td>12:30</td>
                     <td>Vilhelm Gustafson</td>
-                    <td>Bokad</td>
+                    <td>Bokning genomförd</td>
                 </tr>
             </tbody>
-        </table>
+        </table></div>
     </main>
     <footer>
         <p><strong>Telefonnummer:</strong> 123-456-789 -- <strong>E-post:</strong> exempel@gmail.com -- <strong>Adress:</strong> Gata 1, 123 45 Stockholm</p>
