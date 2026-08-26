@@ -1,0 +1,144 @@
+body {
+    background-color: #eee; 
+}
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+nav a:hover {
+    transition: 0.2s;
+    background-color: #555
+}
+
+.rooms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.room{
+    flex: 1 1 280px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding:20px;
+    margin: 20px;
+}
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+.room a {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.room a:hover {
+    transition: 0.2s;
+    background-color: #666
+}
+
+
+fieldset {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+form input[type="text"], form input[type="email"], form input[type="date"], form input[type="time"], form select, form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+form input[type="text"]:focus, form input[type="email"]:focus, form input[type="date"]:focus, form input[type="time"]:focus, form select:focus, form textarea:focus {
+    transition: 0.1s;
+    border: 2px solid black;
+    outline: none;
+}
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    transition: 0.2s;
+    background-color: #555;
+}
+
+
+
+details {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+table, td, th {
+    border: 3px solid black;
+}
+table{
+    border-collapse:collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+th,td {
+    padding: 10px;
+}
+#tablediv{
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+@media (max-width: 500px){
+    h1{
+        font-size:25px;
+    }
+    nav {flex-direction: column;}
+}
