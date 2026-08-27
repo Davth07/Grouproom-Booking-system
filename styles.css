@@ -1,9 +1,22 @@
+:root{
+    --background-color: #eee;
+    --secondary-color: #fff;
+    --header-footer: #333;
+    --button-background: #444;
+    --button-hover: #555;
+    --border-color: black;
+    --link-color: blue;
+    --form-border: #ccc;
+    --other-button-background: #666;
+}
+
+
 body {
-    background-color: #eee; 
+    background-color: var(--background-color); 
 }
 nav {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--header-footer);
+    color: var(--secondary-color);
     padding: 10px;
     text-align: center;
     display:flex;
@@ -12,16 +25,16 @@ nav {
     gap: 10px;
 }
 nav a {
-    color: #fff;
+    color: var(--secondary-color);
     text-decoration: none;
     margin: 0 10px;
-    background-color: #444;
+    background-color: var(--button-background);
     padding: 10px 20px;
     border-radius: 10px;
 }
 nav a:hover {
     transition: 0.2s;
-    background-color: #555
+    background-color: var(--button-hover);
 }
 
 .rooms {
@@ -31,20 +44,20 @@ nav a:hover {
 }
 .room{
     flex: 1 1 280px;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     padding:20px;
     margin: 20px;
 }
 .card {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
 }
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--header-footer);
+    color: var(--secondary-color);
     padding: 20px;
     text-align: center;
 }
@@ -52,24 +65,24 @@ footer {
 
 
 a {
-    color: blue;
+    color: var(--link-color);
     text-decoration: underline;
 }
 .room a {
-    background-color: #444;
-    color: #fff;
+    background-color: var(--button-background);
+    color: var(--secondary-color);
     padding: 10px 20px;
     border-radius: 10px;
     text-decoration: none;
 }
 .room a:hover {
     transition: 0.2s;
-    background-color: #666
+    background-color: var(--other-button-background)
 }
 
 
 fieldset {
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -84,16 +97,16 @@ form input[type="text"], form input[type="email"], form input[type="date"], form
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--form-border);
 }
 form input[type="text"]:focus, form input[type="email"]:focus, form input[type="date"]:focus, form input[type="time"]:focus, form select:focus, form textarea:focus {
     transition: 0.1s;
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
     outline: none;
 }
 form button {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--header-footer);
+    color: var(--secondary-color);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -101,7 +114,7 @@ form button {
 }
 form button:hover {
     transition: 0.2s;
-    background-color: #555;
+    background-color: var(--button-hover);
 }
 
 
@@ -109,7 +122,7 @@ form button:hover {
 details {
     margin: 20px 0;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--form-border);
     border-radius: 5px;
 }
 summary {
@@ -120,7 +133,7 @@ summary {
 
 
 table, td, th {
-    border: 3px solid black;
+    border: 3px solid var(--border-color);
 }
 table{
     border-collapse:collapse;
