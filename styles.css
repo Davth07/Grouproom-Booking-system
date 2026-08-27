@@ -177,3 +177,8 @@ th,td {
         flex-direction: column;
     }
 }
+@media (max-width: 400px){
+    :root{
+        font-size: 7px;
+    }
+}
