@@ -7,10 +7,18 @@
     --border-color: black;
     --link-color: blue;
     --form-border: #ccc;
-    --other-button-background: #666;
+    --other-button-hover: #666;
+    font-size: 10px;
 }
-
-
+h1{
+    font-size: 3.2rem;
+}
+h2{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 1.872rem;
+}
 body {
     background-color: var(--background-color); 
 }
@@ -27,10 +35,11 @@ nav {
 nav a {
     color: var(--secondary-color);
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 1rem;
     background-color: var(--button-background);
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
 }
 nav a:hover {
     transition: 0.2s;
@@ -43,23 +52,26 @@ nav a:hover {
     gap: 1rem;
 }
 .room{
-    flex: 1 1 280px;
+    flex: 1 1 28rem;
     background-color: var(--secondary-color);
-    border-radius: 10px;
-    padding:20px;
-    margin: 20px;
+    border-radius: 1rem;
+    padding:2rem;
+    margin: 2rem;
+    font-size: 1.6rem
 }
 .card {
     background-color: var(--secondary-color);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    font-size:1.6rem;
 }
 footer {
     background-color: var(--header-footer);
     color: var(--secondary-color);
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
+    font-size:1.6rem;
 }
 
 
@@ -67,39 +79,45 @@ footer {
 a {
     color: var(--link-color);
     text-decoration: underline;
+    font-size:1.6rem;
 }
 .room a {
     background-color: var(--button-background);
     color: var(--secondary-color);
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
     text-decoration: none;
 }
 .room a:hover {
     transition: 0.2s;
-    background-color: var(--other-button-background)
+    background-color: var(--other-button-hover);
 }
 
 
 fieldset {
     border: 2px solid var(--border-color);
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    font-size: 1.6rem;
 }
 legend {
     font-weight: bold;
-    padding: 0 10px;
+    padding: 0 1rem;
+    font-size:2rem;
 }
-form input[type="text"], form input[type="email"], form input[type="date"], form input[type="time"], form select, form textarea {
+input[type="text"], input[type="email"], input[type="date"], input[type="time"], select, textarea {
     box-sizing: border-box;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
     border: 1px solid var(--form-border);
 }
-form input[type="text"]:focus, form input[type="email"]:focus, form input[type="date"]:focus, form input[type="time"]:focus, form select:focus, form textarea:focus {
+label {
+    font-size: 1.6rem;
+}
+ input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, input[type="time"]:focus, select:focus, textarea:focus {
     transition: 0.1s;
     border: 2px solid var(--border-color);
     outline: none;
@@ -107,10 +125,11 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 form button {
     background-color: var(--header-footer);
     color: var(--secondary-color);
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     cursor: pointer;
+    font-size:1.6rem;
 }
 form button:hover {
     transition: 0.2s;
@@ -120,10 +139,10 @@ form button:hover {
 
 
 details {
-    margin: 20px 0;
-    padding: 10px;
+    margin: 2rem 0;
+    padding: 1rem;
     border: 1px solid var(--form-border);
-    border-radius: 5px;
+    border-radius: 0.5rem;
 }
 summary {
     font-weight: bold;
@@ -134,14 +153,15 @@ summary {
 
 table, td, th {
     border: 3px solid var(--border-color);
+    font-size: 1.4rem;
 }
 table{
     border-collapse:collapse;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 th,td {
-    padding: 10px;
+    padding: 1rem;
 }
 #tablediv{
     width: 100%;
@@ -150,8 +170,10 @@ th,td {
 
 
 @media (max-width: 500px){
-    h1{
-        font-size:25px;
+    :root{
+        font-size: 8px;
     }
-    nav {flex-direction: column;}
+    nav {
+        flex-direction: column;
+    }
 }
