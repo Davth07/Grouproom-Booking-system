@@ -59,7 +59,7 @@ nav a:hover {
     margin: 2rem;
     font-size: 1.6rem
 }
-.card {
+.card{
     background-color: var(--secondary-color);
     padding: 2rem;
     margin: 2rem;
