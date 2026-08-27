@@ -19,8 +19,16 @@ h2{
 h3{
     font-size: 1.872rem;
 }
+html, body {
+    height: 100%;
+}
 body {
     background-color: var(--background-color); 
+    display:flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
 }
 nav {
     background-color: var(--header-footer);
