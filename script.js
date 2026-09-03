@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			startTime: "12:30",
 			endTime: "13:30",
 			name: "David Thörnqvist",
-			status: "Bokning Genomförd",
+			status: "Bokning genomförd",
 		},
 		{
 			room: 103,
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			startTime: "12:30",
 			endTime: "13:30",
 			name: "David Löfgren Forssén",
-			status: "Bokning Genomförd",
+			status: "Bokning genomförd",
 		},
 		{
 			room: 104,
