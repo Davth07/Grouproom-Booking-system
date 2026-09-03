@@ -118,8 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const bookingsTable = document.getElementById("bookingsTableBody");
 
 	if (nuvarandeSida === "bookings.html") {
-		console.log("booking page");
-
 		bookings.forEach((booking) => {
 			const row = bookingsTable.insertRow();
 
