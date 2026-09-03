@@ -50,11 +50,12 @@
                 <fieldset>
                     <legend>Ytterligare information</legend>
                     <label for="anledning">Anledning för bokning:</label><br>
-                    <textarea id="anledning" name="anledning"></textarea><br><br>
+                    <textarea id="anledning" name="anledning" maxlength="200"></textarea><br>
+                    <span class="counter">0 / 200</span><br><br>
 
                     <label for="personer">Antalet personer:</label><br>
                     <input type="number" id="personer" name="personer" min="1"><br><br>
-                </fieldset>
+                </fieldset> 
 
                 <input type="checkbox" id="villkor" name="villkor" required>
                 <label for="villkor">Jag godkänner villkoren.</label><br><br>
@@ -66,5 +67,6 @@
     <footer>
         <p><strong>Telefonnummer:</strong> 123-456-789 -- <strong>E-post:</strong> exempel@gmail.com -- <strong>Adress:</strong> Gata 1, 123 45 Stockholm</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
