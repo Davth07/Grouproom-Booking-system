@@ -120,16 +120,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (nuvarandeSida === "bookings.html") {
 		bookings.forEach((booking) => {
 			const row = bookingsTable.insertRow();
+			const values = [
+				`Grupprum ${booking.room}`,
+				booking.date,
+				booking.startTime,
+				booking.endTime,
+				booking.name,
+				booking.status,
+			];
 
-			row.innerHTML = `
-			<td>Grupprum ${booking.room}</td>
-			<td>${booking.date}</td>
-			<td>${booking.startTime}</td>
-			<td>${booking.endTime}</td>
-			<td>${booking.name}</td>
-			<td>${booking.status}</td>
-			`;
-			bookingsTable.appendChild(row);
+			values.forEach((value) => {
+				const cell = row.insertCell();
+				cell.textContent = value;
+			});
 		});
 	}
 	//#endregion
