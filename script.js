@@ -200,8 +200,12 @@ function validateEmail(email) {
 }
 
 function validateDate(date) {
-	const today = new Date();
 	const selectedDate = new Date(date);
+	if (Number.isNaN(selectedDate.getTime())) return false;
+
+	const today = new Date();
+	today.setHours(0, 0, 0, 0);
+	selectedDate.setHours(0, 0, 0, 0);
 	return selectedDate >= today;
 }
 
