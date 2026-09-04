@@ -45,16 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const personer = document.getElementById("personer").value;
 			const villkor = document.getElementById("villkor").checked;
 
-			if (
-				!namn ||
-				!email ||
-				!rum ||
-				!datum ||
-				!starttid ||
-				!sluttid ||
-				!anledning ||
-				!personer
-			) {
+			if (!namn || !email || !rum || !datum || !starttid || !sluttid || !personer) {
 				alert("Vänligen fyll i alla obligatoriska fält.");
 				return;
 			}
