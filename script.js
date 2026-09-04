@@ -35,7 +35,64 @@ document.addEventListener("DOMContentLoaded", () => {
 		form.addEventListener("submit", (event) => {
 			event.preventDefault();
 
-			const namn = document.getElementById("namn").value;
+			const namn = document.getElementById("namn").value.trim();
+			const email = document.getElementById("email").value.trim();
+			const rum = document.getElementById("rum").value;
+			const datum = Date.parse(document.getElementById("datum").value);
+			const starttid = document.getElementById("starttid").value;
+			const sluttid = document.getElementById("sluttid").value;
+			const anledning = document.getElementById("anledning").value.trim();
+			const personer = document.getElementById("personer").value;
+			const villkor = document.getElementById("villkor").checked;
+
+			if (
+				!namn ||
+				!email ||
+				!rum ||
+				!datum ||
+				!starttid ||
+				!sluttid ||
+				!anledning ||
+				!personer
+			) {
+				alert("Vänligen fyll i alla obligatoriska fält.");
+				return;
+			}
+
+			if (!validateFullName(namn)) {
+				alert("Vänligen ange ett giltigt för- och efternamn.");
+				return;
+			}
+
+			if (!validateEmail(email)) {
+				alert("Vänligen ange en giltig e-postadress.");
+				return;
+			}
+
+			if (!validateTime(starttid, sluttid)) {
+				alert("Starttiden måste vara tidigare än sluttiden.");
+				return;
+			}
+
+			if (!validateDate(datum)) {
+				alert("Vänligen ange ett giltigt datum.");
+				return;
+			}
+
+			if (!villkor) {
+				alert("Vänligen godkänn villkoren för att fortsätta.");
+				return;
+			}
+
+			if (personer < 1) {
+				alert("Antal personer måste vara minst 1.");
+				return;
+			}
+
+			if (personer > 10) {
+				alert("Antal personer får inte överstiga 10.");
+				return;
+			}
 
 			alert(`Tack ${namn}! Din bokningsförfrågan har skickats.`);
 			form.reset();
@@ -137,3 +194,31 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	//#endregion
 });
+
+//#region Functions
+function validateFullName(name) {
+	const namePattern = /^[a-zA-ZåäöÅÄÖ\s]+$/;
+
+	if (!name.trim().includes(" ")) return false; // Name must contain at least a first and last name
+	return namePattern.test(name);
+}
+
+function validateEmail(email) {
+	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	return emailPattern.test(email);
+}
+
+function validateDate(date) {
+	const today = new Date();
+	const selectedDate = new Date(date);
+	return selectedDate >= today;
+}
+
+function validateTime(startTime, endTime) {
+	const [startHours, startMinutes] = startTime.split(":").map(Number);
+	const [endHours, endMinutes] = endTime.split(":").map(Number);
+
+	return startHours < endHours || (startHours === endHours && startMinutes < endMinutes);
+}
+
+//#endregion
